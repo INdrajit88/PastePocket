@@ -161,4 +161,4 @@ You are free to use, modify, and distribute this software for any purpose.
 
 ---
 
-<p align="center">Made with ❤️ for the macOS community · Open source forever 🔓</p>
+<p align="center">Made with ❤️ for the macOS community by Indrajit</p>
