@@ -104,7 +104,7 @@ struct ClipboardRowView: View {
         }
         .background(
             RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(Color(nsColor: .controlBackgroundColor))
+                .fill(.thinMaterial)
         )
         .overlay(
             RoundedRectangle(cornerRadius: 16, style: .continuous)

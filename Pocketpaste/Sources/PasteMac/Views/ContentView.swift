@@ -29,7 +29,7 @@ struct ContentView: View {
             footer
         }
         .frame(width: 440, height: 560)
-        .background(Color(nsColor: .windowBackgroundColor))
+        .background(.ultraThinMaterial)
         .onAppear {
             eventMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
                 if event.modifierFlags.contains(.command) {
