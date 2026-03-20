@@ -3,9 +3,15 @@ import SwiftUI
 
 struct ClipboardRowView: View {
     let item: ClipboardItem
+    var shortcutIndex: Int? = nil
     let onCopy: () -> Void
     let onTogglePin: () -> Void
     let onDelete: () -> Void
+
+    private var shortcutKey: KeyEquivalent? {
+        guard let index = shortcutIndex, index < 9 else { return nil }
+        return KeyEquivalent(Character(String(index + 1)))
+    }
 
     private static let timestampStyle = Date.RelativeFormatStyle(
         presentation: .named,
@@ -33,6 +39,16 @@ struct ClipboardRowView: View {
                             Label(kindTitle, systemImage: kindIcon)
                                 .font(.caption.weight(.semibold))
                                 .foregroundStyle(item.isPinned ? .orange : .secondary)
+
+                            if let index = shortcutIndex, index < 9 {
+                                Text("⌘\(index + 1)")
+                                    .font(.caption2.weight(.bold))
+                                    .padding(.horizontal, 4)
+                                    .padding(.vertical, 2)
+                                    .background(Color.secondary.opacity(0.15))
+                                    .clipShape(RoundedRectangle(cornerRadius: 4, style: .continuous))
+                                    .foregroundStyle(.secondary)
+                            }
 
                             Spacer()
 

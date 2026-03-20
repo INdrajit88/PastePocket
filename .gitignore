@@ -1,0 +1,39 @@
+# Mac OS
+.DS_Store
+
+# Xcode
+## User settings
+xcuserdata/
+
+## Build
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+## Obj-C/Swift specific
+*.hmap
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+.swiftpm/xcode/
+.swiftpm/configuration/
+
+# Custom Project Files
+PocketPaste.dmg
+dmg_folder/

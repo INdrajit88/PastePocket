@@ -80,7 +80,30 @@ final class ClipboardStore: ObservableObject {
         }
 
         saveHistory()
-        showStatus("Copied to clipboard")
+        showStatus("Copied & Pasting...")
+
+        autoPaste()
+    }
+
+    private func autoPaste() {
+        // Hide PasteMac so previous app regains focus
+        NSApp.hide(nil)
+        
+        // Wait slightly for the window to actually hide and focus to switch
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+            let vKeyCode: CGKeyCode = 0x09 // 'v' key
+            
+            guard let source = CGEventSource(stateID: .hidSystemState) else { return }
+            
+            guard let keyDown = CGEvent(keyboardEventSource: source, virtualKey: vKeyCode, keyDown: true),
+                  let keyUp = CGEvent(keyboardEventSource: source, virtualKey: vKeyCode, keyDown: false) else { return }
+            
+            keyDown.flags = .maskCommand
+            keyUp.flags = .maskCommand
+            
+            keyDown.post(tap: .cghidEventTap)
+            keyUp.post(tap: .cghidEventTap)
+        }
     }
 
     func togglePinned(_ item: ClipboardItem) {

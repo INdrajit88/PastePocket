@@ -8,12 +8,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 }
 
 @main
-struct PasteMacApp: App {
+struct PocketPasteApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @StateObject private var store = ClipboardStore()
 
     var body: some Scene {
-        MenuBarExtra("PasteMac", systemImage: "list.clipboard.fill") {
+        MenuBarExtra("PocketPaste", systemImage: "list.clipboard.fill") {
             ContentView(store: store)
         }
         .menuBarExtraStyle(.window)

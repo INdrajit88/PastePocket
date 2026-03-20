@@ -4,6 +4,7 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var store: ClipboardStore
     @State private var searchText = ""
+    @State private var eventMonitor: Any?
 
     private var filteredItems: [ClipboardItem] {
         store.items(matching: searchText)
@@ -29,12 +30,45 @@ struct ContentView: View {
         }
         .frame(width: 440, height: 560)
         .background(Color(nsColor: .windowBackgroundColor))
+        .onAppear {
+            eventMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
+                if event.modifierFlags.contains(.command) {
+                    if let characters = event.charactersIgnoringModifiers,
+                       let num = Int(characters),
+                       (1...9).contains(num) {
+                        
+                        let indexToCopy = num - 1
+                        let totalCount = pinnedItems.count + recentItems.count
+                        
+                        if indexToCopy < totalCount {
+                            let targetItem: ClipboardItem
+                            if indexToCopy < pinnedItems.count {
+                                targetItem = pinnedItems[indexToCopy]
+                            } else {
+                                targetItem = recentItems[indexToCopy - pinnedItems.count]
+                            }
+                            store.copy(targetItem)
+                            
+                            // Optional: Close popover after copy (MenuBarExtra automatically handles this if desired, or we can leave it)
+                            return nil // consume event
+                        }
+                    }
+                }
+                return event
+            }
+        }
+        .onDisappear {
+            if let monitor = eventMonitor {
+                NSEvent.removeMonitor(monitor)
+                eventMonitor = nil
+            }
+        }
     }
 
     private var header: some View {
         HStack(alignment: .center) {
             VStack(alignment: .leading, spacing: 4) {
-                Text("PasteMac")
+                Text("PocketPaste")
                     .font(.title2.weight(.semibold))
 
                 Text(store.isMonitoringEnabled ? "Watching your clipboard" : "Clipboard capture paused")
@@ -86,9 +120,10 @@ struct ContentView: View {
                     if !pinnedItems.isEmpty {
                         sectionLabel("Pinned")
 
-                        ForEach(pinnedItems) { item in
+                        ForEach(Array(pinnedItems.enumerated()), id: \.element.id) { index, item in
                             ClipboardRowView(
                                 item: item,
+                                shortcutIndex: index,
                                 onCopy: { store.copy(item) },
                                 onTogglePin: { store.togglePinned(item) },
                                 onDelete: { store.delete(item) }
@@ -99,9 +134,10 @@ struct ContentView: View {
                     if !recentItems.isEmpty {
                         sectionLabel(pinnedItems.isEmpty ? "Recent" : "Recent Copies")
 
-                        ForEach(recentItems) { item in
+                        ForEach(Array(recentItems.enumerated()), id: \.element.id) { index, item in
                             ClipboardRowView(
                                 item: item,
+                                shortcutIndex: pinnedItems.count + index,
                                 onCopy: { store.copy(item) },
                                 onTogglePin: { store.togglePinned(item) },
                                 onDelete: { store.delete(item) }
@@ -117,14 +153,15 @@ struct ContentView: View {
 
     private var emptyState: some View {
         VStack(spacing: 12) {
-            Image(systemName: "list.clipboard")
-                .font(.system(size: 34))
-                .foregroundStyle(.secondary)
+            Image("CustomLogo")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 48, height: 48)
 
             Text(searchText.isEmpty ? "Your clipboard history will appear here." : "No clipboard matches for that search.")
                 .font(.headline)
 
-            Text(searchText.isEmpty ? "Copy text or images anywhere on your Mac and PasteMac will keep a searchable history." : "Try a different keyword or clear the search field.")
+            Text(searchText.isEmpty ? "Copy text or images anywhere on your Mac and PocketPaste will keep a searchable history." : "Try a different keyword or clear the search field.")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
