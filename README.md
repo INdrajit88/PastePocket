@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="PocketPaste Logo.svg" width="80" alt="PocketPaste icon" /><br/>
+  <img src="PocketPaste Logo.svg" width="800" alt="PocketPaste icon" /><br/>
   PocketPaste
 </h1>
 
