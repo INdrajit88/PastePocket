@@ -1,0 +1,50 @@
+<svg width="100%" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg">
+  
+
+  <!-- Icon background: vivid purple rounded square -->
+  <rect x="52" y="55" width="224" height="224" rx="48" fill="#5B3DF5" style="fill:rgb(91, 61, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Inner shadow band at bottom for depth -->
+  <rect x="52" y="225" width="224" height="54" rx="0" fill="#3D22D4" opacity="0.45" style="fill:rgb(61, 34, 212);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.45;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <rect x="52" y="249" width="224" height="30" rx="0" fill="#2F18B8" opacity="0.3" style="fill:rgb(47, 24, 184);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.3;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <!-- Bottom corners keep the icon rounded -->
+  <rect x="52" y="225" width="224" height="54" fill="none" style="fill:none;stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Clipboard body (white) -->
+  <rect x="113" y="118" width="102" height="118" rx="9" fill="white" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Top clip bar (white - merges with body) -->
+  <rect x="125" y="110" width="78" height="24" rx="6" fill="white" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Clip hole (purple cutout) -->
+  <rect x="140" y="104" width="48" height="18" rx="6" fill="#5B3DF5" style="fill:rgb(91, 61, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <!-- Inner notch of clip hole (slightly darker) -->
+  <rect x="145" y="102" width="38" height="12" rx="4" fill="#4A2EE0" style="fill:rgb(74, 46, 224);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Content lines inside clipboard -->
+  <rect x="128" y="158" width="72" height="5" rx="2.5" fill="#5B3DF5" opacity="0.18" style="fill:rgb(91, 61, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.18;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <rect x="128" y="172" width="56" height="5" rx="2.5" fill="#5B3DF5" opacity="0.18" style="fill:rgb(91, 61, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.18;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <rect x="128" y="186" width="66" height="5" rx="2.5" fill="#5B3DF5" opacity="0.18" style="fill:rgb(91, 61, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.18;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <rect x="128" y="200" width="42" height="5" rx="2.5" fill="#5B3DF5" opacity="0.18" style="fill:rgb(91, 61, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.18;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Teal paste badge (bottom right of clipboard) -->
+  <circle cx="199" cy="222" r="14" fill="#00D4AA" style="fill:rgb(0, 212, 170);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <!-- Paste cursor icon inside badge -->
+  <path d="M193 222 L198 227 L206 217" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="fill:none;stroke:rgb(255, 255, 255);color:rgb(255, 255, 255);stroke-width:2.2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Pocket stitching line at bottom of icon (decorative) -->
+  <path d="M88 261 L240 261" stroke="white" stroke-width="1" stroke-dasharray="4 4" opacity="0.22" style="fill:rgb(0, 0, 0);stroke:rgb(255, 255, 255);color:rgb(255, 255, 255);stroke-width:1px;stroke-dasharray:4px, 4px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.22;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- WORDMARK -->
+  <!-- "Pocket" — light weight -->
+  <text x="320" y="168" font-family="system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="58" font-weight="300" letter-spacing="-1.5" style="fill:rgb(15, 23, 42);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:system-ui, -apple-system, &quot;Helvetica Neue&quot;, sans-serif;font-size:58px;font-weight:300;text-anchor:start;dominant-baseline:auto">Pocket</text>
+
+  <!-- "Paste" — bold, purple -->
+  <text x="320" y="232" font-family="system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="58" font-weight="700" letter-spacing="-1.5" fill="#5B3DF5" style="fill:rgb(91, 61, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:system-ui, -apple-system, &quot;Helvetica Neue&quot;, sans-serif;font-size:58px;font-weight:700;text-anchor:start;dominant-baseline:auto">Paste</text>
+
+  <!-- Divider line -->
+  <line x1="320" y1="248" x2="628" y2="248" stroke="#5B3DF5" stroke-width="1.5" opacity="0.25" style="fill:rgb(0, 0, 0);stroke:rgb(91, 61, 245);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.25;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Tagline -->
+  <text x="320" y="274" font-family="system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" letter-spacing="0.5" style="fill:rgb(100, 116, 139);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:system-ui, -apple-system, &quot;Helvetica Neue&quot;, sans-serif;font-size:14px;font-weight:400;text-anchor:start;dominant-baseline:auto">Your clipboard, always in your pocket.</text>
+</svg>

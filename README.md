@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="Pastemac/Assets.xcassets/AppIcon.appiconset/icon_128x128.png" width="80" alt="PocketPaste icon" /><br/>
+  <img src="PocketPaste Logo.svg" width="80" alt="PocketPaste icon" /><br/>
   PocketPaste
 </h1>
 
